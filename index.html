@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The Event Originators — Kolkata's Premier Event &amp; Wedding Planners</title>
+    <meta name="description" content="The Event Originators is a full-service event management and wedding planning company based in Kolkata. Personalized planning, stunning décor, and stress-free execution since 2016.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div class="loader" id="loader">
+        <div class="loader__inner">
+            <div class="loader__ring"></div>
+            <span class="loader__text">TEO</span>
+        </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+        <a href="#hero" class="nav__logo" data-text="The Event Originators">
+            <span class="nav__logo-mark"></span>
+            The Event Originators
+        </a>
+        <nav class="nav__links" id="navLinks">
+            <a href="#services" class="nav__link">Services</a>
+            <a href="#events" class="nav__link">Portfolio</a>
+            <a href="#gallery" class="nav__link">Gallery</a>
+            <a href="#voices" class="nav__link">Testimonials</a>
+            <a href="#contact" class="nav__link">Contact</a>
+        </nav>
+        <a href="#contact" class="nav__cta">Get a Quote</a>
+        <button class="nav__burger" id="burger" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- HERO with elegant particle scene -->
+    <section class="hero" id="hero">
+        <canvas class="hero__canvas" id="heroCanvas"></canvas>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__eyebrow reveal">Kolkata's Premier Event Planners · Est. 2016</p>
+            <h1 class="hero__title">
+                <span class="hero__line reveal">Your celebrations,</span>
+                <span class="hero__line reveal">our <em>passion</em></span>
+            </h1>
+            <p class="hero__sub reveal">
+                Personalized wedding planning, stunning décor &amp; stress-free execution
+                for every occasion — from intimate gatherings to grand celebrations.
+            </p>
+            <div class="hero__actions reveal">
+                <a href="#events" class="btn btn--primary">View Our Work</a>
+                <a href="#contact" class="btn btn--ghost">Plan Your Event</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+        <div class="hero__marquee" aria-hidden="true">
+            <div class="hero__marquee-track">
+                <span>WEDDINGS</span><span>✦</span><span>HALDI &amp; SANGEET</span><span>✦</span>
+                <span>BIRTHDAYS</span><span>✦</span><span>CORPORATE EVENTS</span><span>✦</span>
+                <span>ANNIVERSARIES</span><span>✦</span><span>WEDDINGS</span><span>✦</span>
+                <span>HALDI &amp; SANGEET</span><span>✦</span><span>BIRTHDAYS</span><span>✦</span>
+                <span>CORPORATE EVENTS</span><span>✦</span><span>ANNIVERSARIES</span><span>✦</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" id="stats">
+        <div class="stats__grid">
+            <div class="stat reveal">
+                <span class="stat__num" data-target="1000" data-suffix="+">0</span>
+                <span class="stat__label">Events Completed</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat__num" data-target="10" data-suffix="+">0</span>
+                <span class="stat__label">Years of Expertise</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat__num" data-target="500" data-suffix="+">0</span>
+                <span class="stat__label">Happy Families</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat__num" data-target="24" data-suffix="/7">0</span>
+                <span class="stat__label">Support Available</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="section-head">
+            <p class="section-head__eyebrow reveal">Our Services</p>
+            <h2 class="section-head__title reveal">End-to-end <em>event solutions</em></h2>
+            <p class="section-head__desc reveal">
+                From intimate family celebrations to grand weddings and corporate conferences — we handle every detail so you can enjoy the moment.
+            </p>
+        </div>
+        <div class="services__grid">
+            <article class="service-card reveal" data-tilt>
+                <div class="service-card__inner">
+                    <div class="service-card__face service-card__face--front">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 64 64" width="44" height="44"><circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M24 32l6 6 12-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3>Wedding Planning</h3>
+                        <p>Complete wedding coordination with budget-friendly packages — from Haldi &amp; Sangeet to the grand reception.</p>
+                        <span class="service-card__hint">Tap to see more →</span>
+                    </div>
+                    <div class="service-card__face service-card__face--back">
+                        <h3>Wedding Planning</h3>
+                        <ul>
+                            <li>Full coordination &amp; planning</li>
+                            <li>Haldi &amp; Sangeet ceremonies</li>
+                            <li>Pre-wedding events</li>
+                            <li>Budget-friendly packages</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="service-card reveal" data-tilt>
+                <div class="service-card__inner">
+                    <div class="service-card__face service-card__face--front">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 64 64" width="44" height="44"><rect x="10" y="14" width="44" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M22 26h20M22 34h20M22 42h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3>Venue &amp; Décor</h3>
+                        <p>Elegant floral arrangements, theme styling, and stage decoration that transform any venue into a dream setting.</p>
+                        <span class="service-card__hint">Tap to see more →</span>
+                    </div>
+                    <div class="service-card__face service-card__face--back">
+                        <h3>Venue &amp; Décor</h3>
+                        <ul>
+                            <li>Venue selection &amp; booking</li>
+                            <li>Floral arrangements</li>
+                            <li>Theme styling &amp; design</li>
+                            <li>Stage decoration</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="service-card reveal" data-tilt>
+                <div class="service-card__inner">
+                    <div class="service-card__face service-card__face--front">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 64 64" width="44" height="44"><path d="M32 8l6 16 16 1-12 11 4 17-14-9-14 9 4-17L10 25l16-1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3>Social Events</h3>
+                        <p>Birthday parties, anniversaries, family gatherings, and festival celebrations — crafted with personal attention.</p>
+                        <span class="service-card__hint">Tap to see more →</span>
+                    </div>
+                    <div class="service-card__face service-card__face--back">
+                        <h3>Social Events</h3>
+                        <ul>
+                            <li>Birthday parties</li>
+                            <li>Anniversary celebrations</li>
+                            <li>Family gatherings</li>
+                            <li>Festival events</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="service-card reveal" data-tilt>
+                <div class="service-card__inner">
+                    <div class="service-card__face service-card__face--front">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 64 64" width="44" height="44"><path d="M32 6v8M32 50v8M6 32h8M50 32h8M14 14l6 6M44 44l6 6M50 14l-6 6M20 44l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="32" cy="32" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </div>
+                        <h3>Corporate Events</h3>
+                        <p>Professional conference management, brand promotions, and enterprise events that leave a lasting impression.</p>
+                        <span class="service-card__hint">Tap to see more →</span>
+                    </div>
+                    <div class="service-card__face service-card__face--back">
+                        <h3>Corporate Events</h3>
+                        <ul>
+                            <li>Conferences &amp; seminars</li>
+                            <li>Brand promotions</li>
+                            <li>Product launches</li>
+                            <li>Team-building events</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="service-card reveal" data-tilt>
+                <div class="service-card__inner">
+                    <div class="service-card__face service-card__face--front">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 64 64" width="44" height="44"><path d="M12 48V28l20-16 20 16v20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M26 48V36h12v12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </div>
+                        <h3>Photography &amp; Film</h3>
+                        <p>Candid photography, cinematic videography, and pre-wedding shoots to capture every precious moment.</p>
+                        <span class="service-card__hint">Tap to see more →</span>
+                    </div>
+                    <div class="service-card__face service-card__face--back">
+                        <h3>Photography &amp; Film</h3>
+                        <ul>
+                            <li>Candid photography</li>
+                            <li>Cinematic videography</li>
+                            <li>Pre-wedding shoots</li>
+                            <li>Drone coverage</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="service-card reveal" data-tilt>
+                <div class="service-card__inner">
+                    <div class="service-card__face service-card__face--front">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 64 64" width="44" height="44"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M32 18v14l10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3>Day-of Coordination</h3>
+                        <p>Our experienced crew manages every timeline and detail on-site so you can be a guest at your own event.</p>
+                        <span class="service-card__hint">Tap to see more →</span>
+                    </div>
+                    <div class="service-card__face service-card__face--back">
+                        <h3>Day-of Coordination</h3>
+                        <ul>
+                            <li>Dedicated event manager</li>
+                            <li>Vendor coordination</li>
+                            <li>Timeline management</li>
+                            <li>Guest management</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FEATURED EVENTS — 3D carousel -->
+    <section class="events" id="events">
+        <div class="section-head">
+            <p class="section-head__eyebrow reveal">Our Portfolio</p>
+            <h2 class="section-head__title reveal">Celebrations we've <em>crafted</em></h2>
+            <p class="section-head__desc reveal">
+                Swipe or use the arrows to explore some of our favourite events from across India.
+            </p>
+        </div>
+        <div class="events__stage">
+            <button class="events__nav events__nav--prev" id="evPrev" aria-label="Previous">‹</button>
+            <div class="carousel" id="carousel">
+                <div class="carousel__track" id="carouselTrack">
+                    <figure class="carousel__card" data-color="#C06B48">
+                        <div class="carousel__img" style="--g1:#D4956B;--g2:#C06B48">
+                            <span class="carousel__tag">Wedding</span>
+                            <span class="carousel__year">2025</span>
+                        </div>
+                        <figcaption>
+                            <h3>Riya &amp; Arjun — Royal Bengali Wedding</h3>
+                            <p>A grand 800-guest wedding with traditional décor, floral mandaps, and cinematic lighting.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel__card" data-color="#C5A55A">
+                        <div class="carousel__img" style="--g1:#E8D5A3;--g2:#C5A55A">
+                            <span class="carousel__tag">Corporate</span>
+                            <span class="carousel__year">2025</span>
+                        </div>
+                        <figcaption>
+                            <h3>TechVenture — Annual Conference</h3>
+                            <p>A 2-day corporate conference with 1,500 delegates, keynote staging, and brand activations.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel__card" data-color="#DB7093">
+                        <div class="carousel__img" style="--g1:#F4C2C2;--g2:#DB7093">
+                            <span class="carousel__tag">Sangeet</span>
+                            <span class="carousel__year">2024</span>
+                        </div>
+                        <figcaption>
+                            <h3>Priya's Sangeet Night</h3>
+                            <p>A vibrant sangeet celebration with choreographed performances and stunning stage décor.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel__card" data-color="#8B6F5E">
+                        <div class="carousel__img" style="--g1:#C5A55A;--g2:#8B6F5E">
+                            <span class="carousel__tag">Birthday</span>
+                            <span class="carousel__year">2024</span>
+                        </div>
+                        <figcaption>
+                            <h3>Little Aarav's First Birthday</h3>
+                            <p>A magical jungle-themed birthday party with custom décor, photo booths, and entertainment.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel__card" data-color="#D4956B">
+                        <div class="carousel__img" style="--g1:#D4956B;--g2:#DB7093">
+                            <span class="carousel__tag">Anniversary</span>
+                            <span class="carousel__year">2024</span>
+                        </div>
+                        <figcaption>
+                            <h3>25th Silver Anniversary Gala</h3>
+                            <p>An intimate yet elegant silver jubilee celebration with 200 guests and live music.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <button class="events__nav events__nav--next" id="evNext" aria-label="Next">›</button>
+        </div>
+    </section>
+
+    <!-- GALLERY — tilt grid -->
+    <section class="gallery" id="gallery">
+        <div class="section-head">
+            <p class="section-head__eyebrow reveal">Our Gallery</p>
+            <h2 class="section-head__title reveal">Moments, <em>treasured</em></h2>
+            <p class="section-head__desc reveal">A glimpse of the celebrations we bring to life. Hover any tile to step inside.</p>
+        </div>
+        <div class="gallery__grid">
+            <div class="gallery__tile reveal" data-tilt style="--g1:#D4956B;--g2:#C06B48"><span>Wedding Mandap</span></div>
+            <div class="gallery__tile reveal" data-tilt style="--g1:#E8D5A3;--g2:#C5A55A"><span>Sangeet Stage</span></div>
+            <div class="gallery__tile reveal" data-tilt style="--g1:#F4C2C2;--g2:#DB7093"><span>Haldi Ceremony</span></div>
+            <div class="gallery__tile reveal" data-tilt style="--g1:#C5A55A;--g2:#8B6F5E"><span>Birthday Party</span></div>
+            <div class="gallery__tile reveal" data-tilt style="--g1:#D4956B;--g2:#DB7093"><span>Reception Décor</span></div>
+            <div class="gallery__tile reveal" data-tilt style="--g1:#C06B48;--g2:#E8D5A3"><span>Corporate Event</span></div>
+        </div>
+    </section>
+
+    <!-- VOICES / TESTIMONIALS -->
+    <section class="voices" id="voices">
+        <div class="section-head">
+            <p class="section-head__eyebrow reveal">Client Testimonials</p>
+            <h2 class="section-head__title reveal">Trusted by <em>families across India</em></h2>
+        </div>
+        <div class="voices__slider" id="voicesSlider">
+            <div class="voices__track" id="voicesTrack">
+                <blockquote class="voice">
+                    <p>"The Event Originators turned our wedding into a fairy tale. Every detail was perfect — from the mandap to the farewell. Our family is still in awe."</p>
+                    <footer>
+                        <span class="voice__avatar" style="--c:#C06B48">RS</span>
+                        <span><strong>Riya &amp; Sourav</strong> · Newlyweds, Kolkata</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="voice">
+                    <p>"We gave them a tight budget and they delivered a celebration that looked five times the price. Truly incredible work and so stress-free."</p>
+                    <footer>
+                        <span class="voice__avatar" style="--c:#C5A55A">AD</span>
+                        <span><strong>Anirban Das</strong> · Father of the Bride</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="voice">
+                    <p>"Our company's annual conference was flawlessly organized. From staging to hospitality, everything was handled with professionalism."</p>
+                    <footer>
+                        <span class="voice__avatar" style="--c:#DB7093">PM</span>
+                        <span><strong>Priya Mukherjee</strong> · HR Director, TechCorp</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="voice">
+                    <p>"They planned our son's first birthday with so much love and creativity. The jungle theme was absolutely magical for the kids!"</p>
+                    <footer>
+                        <span class="voice__avatar" style="--c:#D4956B">SG</span>
+                        <span><strong>Sneha Ghosh</strong> · Parent, Kolkata</span>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="voices__dots" id="voicesDots"></div>
+        </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+        <div class="cta-band__inner">
+            <h2 class="reveal">Your celebration deserves <em>the best.</em></h2>
+            <p class="reveal">Tell us your date and vision. We'll make it unforgettable.</p>
+            <a href="#contact" class="btn btn--primary reveal">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact__card">
+            <div class="contact__info">
+                <p class="section-head__eyebrow">Let's Talk</p>
+                <h2>Start planning your <em>celebration</em></h2>
+                <p>Share a few details and our team will reach out within 24 hours.</p>
+                <ul class="contact__list">
+                    <li><strong>Office</strong> 5/1, Dr Rajendra Prasad Sarani, B.B.D. Bagh, Kolkata — 700001</li>
+                    <li><strong>Email</strong> theeventoriginators@gmail.com</li>
+                    <li><strong>Phone</strong> +91 9331006418</li>
+                    <li><strong>Hours</strong> Open 24/7 (Mon–Sat) · Pan-India Available</li>
+                </ul>
+            </div>
+            <form class="contact__form" id="contactForm" novalidate>
+                <div class="field">
+                    <input type="text" id="name" required>
+                    <label for="name">Your name</label>
+                    <span class="field__line"></span>
+                </div>
+                <div class="field">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                    <span class="field__line"></span>
+                </div>
+                <div class="field">
+                    <select id="type" required>
+                        <option value="" disabled selected hidden></option>
+                        <option>Wedding</option>
+                        <option>Haldi / Sangeet / Pre-Wedding</option>
+                        <option>Birthday Party</option>
+                        <option>Anniversary</option>
+                        <option>Corporate Event</option>
+                        <option>Other</option>
+                    </select>
+                    <label for="type">Event type</label>
+                    <span class="field__line"></span>
+                </div>
+                <div class="field">
+                    <textarea id="message" rows="3" required></textarea>
+                    <label for="message">Tell us about your vision</label>
+                    <span class="field__line"></span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Send Inquiry</button>
+                <p class="contact__note" id="formNote"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <a href="#hero" class="footer__logo">The Event Originators</a>
+            <p class="footer__tag">Kolkata's premier event &amp; wedding planners, since 2016.</p>
+            <div class="footer__social">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="YouTube">YT</a>
+                <a href="tel:+919331006418" aria-label="Call Us">☎</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>© 2026 The Event Originators. All rights reserved.</span>
+            <span>Made with love in Kolkata ♥</span>
+        </div>
+    </footer>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="three-scene.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
