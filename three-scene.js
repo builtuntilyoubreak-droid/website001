@@ -8,8 +8,9 @@
 
     var scene = new THREE.Scene();
 
+    var baseZ = window.innerWidth < 768 ? 26 : 18;
     var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.set(0, 0, 18);
+    camera.position.set(0, 0, baseZ);
 
     var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
@@ -136,6 +137,7 @@
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+        baseZ = window.innerWidth < 768 ? 26 : 18;
     }
     window.addEventListener('resize', onResize);
 
@@ -163,7 +165,7 @@
         // very gentle camera parallax
         camera.position.x += (mouse.x * 1.2 - camera.position.x) * 0.02;
         camera.position.y += (-mouse.y * 0.8 - camera.position.y) * 0.02;
-        camera.position.z = 18 + Math.min(scrollY / window.innerHeight, 1) * 4;
+        camera.position.z = baseZ + Math.min(scrollY / window.innerHeight, 1) * 4;
         camera.lookAt(0, 0, 0);
 
         // shapes float gently
