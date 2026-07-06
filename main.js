@@ -166,6 +166,7 @@
                 var ry = offset * -28;
                 var scale = 1 - abs * 0.1;
                 var card = cards[i];
+                card.classList.toggle('active', offset === 0);
                 card.style.transform = 'translate(-50%,-50%) translateX(' + tx + ') translateZ(' + tz + 'px) rotateY(' + ry + 'deg) scale(' + Math.max(scale, 0.65) + ')';
                 card.style.opacity = inView ? (1 - abs * 0.25) : 0;
                 card.style.zIndex = String(100 - abs);
