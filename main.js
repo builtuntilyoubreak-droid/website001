@@ -48,10 +48,17 @@
     navLinks && navLinks.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () { toggleMenu(false); });
     });
-    // Close mobile menu on escape key
+    // Close mobile menu on escape key or clicking outside
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && burger && burger.classList.contains('open')) {
             toggleMenu(false);
+        }
+    });
+    document.addEventListener('click', function (e) {
+        if (burger && burger.classList.contains('open')) {
+            if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+                toggleMenu(false);
+            }
         }
     });
 
@@ -144,8 +151,7 @@
         if (!track) return;
         var cards = Array.prototype.slice.call(track.querySelectorAll('.carousel__card'));
         var count = cards.length;
-        var index = 0;
-        var dragStart = null, dragging = false;
+        var dragStart = null, dragging = false, dragMoved = false;
 
         function layout() {
             var w = window.innerWidth;
@@ -174,17 +180,34 @@
 
         // click a side card to bring it center
         cards.forEach(function (card, i) {
-            card.addEventListener('click', function () {
+            card.addEventListener('click', function (e) {
+                if (dragMoved) {
+                    e.preventDefault();
+                    return;
+                }
                 if (i !== index) { index = i; layout(); }
             });
         });
 
         // drag / swipe
         var stage = document.getElementById('carousel');
+        function onPointerMove(e) {
+            if (!dragging) return;
+            if (Math.abs(e.clientX - dragStart) > 10) {
+                dragMoved = true;
+            }
+        }
         if (stage) {
-            stage.addEventListener('pointerdown', function (e) { dragging = true; dragStart = e.clientX; });
+            stage.addEventListener('pointerdown', function (e) {
+                dragging = true;
+                dragStart = e.clientX;
+                dragMoved = false;
+                window.addEventListener('pointermove', onPointerMove);
+            });
             window.addEventListener('pointerup', function (e) {
-                if (!dragging) return; dragging = false;
+                if (!dragging) return;
+                dragging = false;
+                window.removeEventListener('pointermove', onPointerMove);
                 var dx = e.clientX - dragStart;
                 if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
             });
