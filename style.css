@@ -454,7 +454,18 @@ img { max-width: 100%; display: block; }
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px); color: #fff;
 }
-.carousel__card figcaption { padding: 1.2rem 0.2rem 0; }
+.carousel__card figcaption {
+    padding: 1.2rem 0.2rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease), visibility 0.4s;
+}
+.carousel__card.active figcaption {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 .carousel__card figcaption h3 {
     font-size: 1.15rem; margin-bottom: 0.3rem;
     font-family: 'Cormorant', Georgia, serif; font-weight: 600;
@@ -618,6 +629,16 @@ img { max-width: 100%; display: block; }
 }
 .field input:focus, .field textarea:focus, .field select:focus {
     border-bottom-color: var(--accent);
+}
+.field select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B6F5E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.2rem center;
+    background-size: 14px;
+    padding-right: 24px;
 }
 .field select option { background: var(--bg); }
 .field textarea { resize: vertical; min-height: 60px; }
